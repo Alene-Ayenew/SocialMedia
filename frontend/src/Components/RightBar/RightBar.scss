@@ -1,9 +1,12 @@
+@use "../../style.scss" as *;
 .rightBar {
+    @include themify($themes){
     flex: 3;
     position: sticky;
     top: 70px;
     height: calc(100vh - 70px);
     overflow: scroll;
+    background: themed("bgSoft");
 
     &::-webkit-scrollbar {
         display: none;
@@ -54,12 +57,13 @@
 
                     }
                     p{
-                        color: grey;
+                        color: themed("textColorSoft");
                     }
 
                     span {
                         font-weight: 500;
                         color: black;
+                        color: themed("textColor");
                     }
 
                 }
@@ -87,5 +91,6 @@
                 }
             }
         }
+    }
     }
 }
